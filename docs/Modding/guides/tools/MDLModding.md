@@ -2,7 +2,7 @@
 
 ## MDL Overview
 
-Model (MDL) is the extension for Source's proprietary model format. It defines the structure of the model along with animation, bounding box, hit box, materials, mesh and LOD information. Unlike other Source games, in Titanfall 2 files like the `.phy`, `.vtx`, `.vvd` etc. are not separate files and are instead included in the .mdl file.
+Model (MDL) is the extension for Source's proprietary model format. It defines the structure of the model along with animation, bounding box, hit box, materials, mesh and LOD information. Unlike other Source games, in Titanfall 2 files like the `.phy`, `.vtx`, `.vvd` etc. are not separate files and are instead included in the `.mdl` file.
 
 [VALVe developer docs "Model"](https://developer.valvesoftware.com/wiki/.mdl)
 
@@ -21,7 +21,7 @@ While creating an entire model from scratch is possible, it would be an extremel
 - [MDLShit](https://github.com/headassbtw/mdlshit)
 - [Harmony VPK](https://github.com/harmonytf/HarmonyVPKTool) (optional if you want to extract the model yourself)
 - [Crak0kalos StudioMDL](https://www.moddb.com/downloads/crak0kalos-studiomdl-full) (optional)
-One of the following on Steam:
+<br>One of the following on Steam:
     - [Portal 2](https://store.steampowered.com/app/620/Portal_2/) (and its [Authoring Tools](https://developer.valvesoftware.com/wiki/Authoring_Tools/SDK_(Portal_2)))
     - [SourceFilmMaker](https://store.steampowered.com/app/1840/Source_Filmmaker/) (FREE)
 
@@ -275,7 +275,7 @@ This is the way you will usually do it when reimporting a model that you have ed
 - Set the name of the material to its NAME in the game files
 
     !!! note
-        with dmx files you can set the material path later on in the export menu. If you have multiple needed paths we will talk about that in the next step [Multiple Material Paths](#step-55-multiple-material-paths-dmx).
+        With `.dmx` files you can set the material path later on in the export menu. If you have multiple needed paths, we will talk about that in the next step: [Multiple Material Paths](#step-55-multiple-material-paths-dmx).
         This is why we set the name of the material to its name in the game files instead of its path.
 
 - Exit `EDIT Mode`.
@@ -379,11 +379,11 @@ The following words correspond to the following:
 
 `Crowbar ERROR: The model compiler, "<filename>", does not exist.`
 
-`Crowbar ERROR: The game's "<filename>" file does not exist.`
+`Crowbar ERROR: The game's "<filename>" file does not exist.`:
     Mostly happens if you did not properly set up Crowbar, make sure you set the `Game that has the model compiler` to [your prerequisite game](#prerequisites).
 
-`Crowbar ERROR: Too many materials used, max 32`
+`Crowbar ERROR: Too many materials used, max 32`:
     Make sure you don't have any duplicate or unecessary materials (for example, `models\amazing\uncoolmaterial\cool_material2` and `models/amazing/uncoolmaterial/cool_material2` are considered separate materials). If that fails, compile the model using Crak0kalos StudioMDL.
 
-`Ammo counters and sights are not visible`
+`Ammo counters and sights are not visible`:
     You forgot to include your model's `.rui` file when combining it in MDLShit.
